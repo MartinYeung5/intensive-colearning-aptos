@@ -189,4 +189,34 @@ const {
 在這個例子中，signTransaction的參數是transactionToSign，而transactionToSign是通過"transaction.build.simple"獲得。跟第四個例子相比，主要是signTransaction的參數不同，不過最終的結果是相同的，所得出的類型也是一樣。
 
 ### 2024.09.09
+
+* 創建智能合約
+創建智能合約，在Aptos只需通過一句簡單命令即可完成。
+```
+aptos move init --name my_todo_list
+```
+當執行完成之後，就可會出現以下訊息:
+```
+{
+  "Result": "Success"
+}
+```
+
+在當下目錄會出現4個文件，分別是3個文件夾及一個Move.toml文件。
+
+文件夾有scripts, sourcesm, tests，而我們在執行命令所輸入到的 -- name my-todo_list 
+就會出現在Move.tome文件內。
+
+* 安全性
+針對安全性，Aptos有以下4個優勢:
+1. Formal Verification	
+* Aptos framework is fully specified and formally verified with the Move Prover. This includes the core contracts involving governance, NFTs, and Tokens.
+2. Gas Coverage	
+* Move VM has 100% gas coverage. Gas is charged based upon actual usage in the system (CPU, memory, storage, I/O). In other words, no gas exploits.
+3. Security Redundancy	
+* Security redundancy provided by runtime safety checks.
+4. Permission Controls	
+* Permission controls can flexibly be built at various levels. For example, token level permission controls exist by default to enable RWA tokenization.
+
+### 2024.09.10
 <!-- Content_END -->
