@@ -31,7 +31,6 @@ Frontend交互部分，我用了@aptos-labs/wallet-adapter-react，透過它使�
 
 ```
 const {
-    connected,
     account,
     network,
     signAndSubmitTransaction,
