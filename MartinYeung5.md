@@ -2,7 +2,7 @@
 timezone: Asia/Shanghai
 ---
 
-# {你的名字}
+# MartinYeung5
 
 1. 自我介绍
 * Martin Yeung, 來自中國香港，計算機科學+電商專業，香港城市大學理學碩士畢業，專注於區塊鏈技術研究和應用。
@@ -131,4 +131,63 @@ const {
 
 ### 2024.09.08
 
+
+繼續昨天對useWallet的學習和了解，
+第四個例子(signTransaction)是讓用戶進行一項交易動作:
+
+```
+  // Legacy typescript sdk support
+  const onSignTransaction = async () => {
+    try {
+      const payload = {
+        type: "entry_function_payload",
+        function: "0x1::coin::transfer",
+        type_arguments: ["0x1::aptos_coin::AptosCoin"],
+        arguments: [account?.address, 1], // 1 is in Octas
+      };
+
+      // 交易完成後的回應為response，可以留意到const response的類型是"AccountAuthenticator"。
+      const response = await signTransaction(payload);
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+```
+
+可以看到signTransaction中的參數是payload，它的type是"entry_function_payload"，
+當動作完成後返回的數據類型是"AccountAuthenticator"。
+
+
+第五個例子(signTransaction)也是讓用戶進行一項交易動作:
+
+```
+  const onSignTransactionV2 = async () => {
+    if (!account) return;
+
+    try {
+      const transactionToSign = await aptosClient(
+        network,
+      ).transaction.build.simple({
+        sender: account.address,
+        data: {
+          function: "0x1::coin::transfer",
+          typeArguments: [APTOS_COIN],
+          functionArguments: [account.address, 1], // 1 is in Octas
+        },
+      });
+      
+      // 交易完成後的回應為response，可以留意到const response的類型是"AccountAuthenticator"。
+      const response = await signTransaction(transactionToSign);
+      bobSenderAuthenticator = response;
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+```
+
+在這個例子中，signTransaction的參數是transactionToSign，而transactionToSign是通過"transaction.build.simple"獲得。跟第四個例子相比，主要是signTransaction的參數不同，不過最終的結果是相同的，所得出的類型也是一樣。
+
+### 2024.09.09
 <!-- Content_END -->
