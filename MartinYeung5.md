@@ -219,5 +219,13 @@ aptos move init --name my_todo_list
 * Permission controls can flexibly be built at various levels. For example, token level permission controls exist by default to enable RWA tokenization.
 
 ### 2024.09.10
+* Authenticator
+在aptos, 未簽名的交易會被視為"RawTransaction"。
+它們會包含所有有關在Aptos上執行的動作的訊息，但就沒有包括到合適的有效簽名或Authenticator。
+在Aptos區塊鏈上，所有數據都會被加密為BCS(Binary Canonical Serialization)。
+而Aptos也會支持多種簽名方式，會以Ed25519作為預設的選擇，大家可以根據自己的項目情況而作出更改。
+Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來執行用戶的交易動作。
+所以把Authenticator理解為收集用戶簽名權限的地方，然後再交給Aptos區塊鏈去執行最終的動作。
+
 
 <!-- Content_END -->
