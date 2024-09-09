@@ -219,4 +219,5 @@ aptos move init --name my_todo_list
 * Permission controls can flexibly be built at various levels. For example, token level permission controls exist by default to enable RWA tokenization.
 
 ### 2024.09.10
+
 <!-- Content_END -->
