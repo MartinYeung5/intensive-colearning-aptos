@@ -229,10 +229,10 @@ Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來�
 
 ### 2024.09.11
 * 怎樣使到RawTransaction 成為一個已簽名的交易
-首先用戶在頁面提供交易動作後，在經過區塊鏈最終確認前，會先被加密成為BCS，
-然後通過Serialization對訊息進行簽名，在這過程中，需要獲得用戶的private key，再利用用戶的private key
+1. 首先用戶在頁面提供交易動作後，在經過區塊鏈最終確認前，會先被加密成為BCS，
+2. 然後通過Serialization對訊息進行簽名，在這過程中，需要獲得用戶的private key，再利用用戶的private key
 來生成一個有效的交易簽名。在這一步會產生一個RawTransaction的簽名，但仍未進行交易的。
-之後會經過Authenticator進行下一步動作，Authenticator會獲取用戶的public key和較早前獲到的RawTransaction的簽名。
-當Authenticator成功收集到兩項資料就會讓Aptos進行最後的交易簽名的動作。
+3. 之後會經過Authenticator進行下一步動作，Authenticator會獲取用戶的public key和較早前獲到的RawTransaction的簽名。
+4. 當Authenticator成功收集到兩項資料就會讓Aptos進行最後的交易簽名的動作。
 
 <!-- Content_END -->
