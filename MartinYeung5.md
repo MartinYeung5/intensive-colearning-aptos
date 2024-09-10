@@ -235,4 +235,8 @@ Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來�
 3. 之後會經過Authenticator進行下一步動作，Authenticator會獲取用戶的public key和較早前獲到的RawTransaction的簽名。
 4. 當Authenticator成功收集到兩項資料就會讓Aptos進行最後的交易簽名的動作。
 
+
+### 2024.09.12
+
+
 <!-- Content_END -->
