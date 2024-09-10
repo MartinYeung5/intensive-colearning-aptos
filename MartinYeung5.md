@@ -237,6 +237,7 @@ Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來�
 
 
 ### 2024.09.12
-
+建立一個已簽名的文易
+1. Raw Transaction
 
 <!-- Content_END -->
