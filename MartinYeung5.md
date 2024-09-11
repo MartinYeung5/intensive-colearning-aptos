@@ -239,5 +239,8 @@ Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來�
 ### 2024.09.12
 建立一個已簽名的文易
 1. Raw Transaction
+首先 raw transaction是由以下幾個部分組成的:
+* 用戶的地址(Address)
+* 一組有次序的數字(unit64): 這組數字是針對當下的交易，而它也是必須與儲存在用戶戶口  
 
 <!-- Content_END -->
