@@ -248,4 +248,13 @@ Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來�
 
 
 ### 2024.09.13
+針對建立一個已簽名的交易，可以透過整個流程進作一步了解。
+當中有幾個重點部分/術語可以深入認識。
+* Raw Transaction
+* BCS
+* Signing message
+* Signature
+* Signed transaction
+* Multisignature transactions
+
 <!-- Content_END -->
