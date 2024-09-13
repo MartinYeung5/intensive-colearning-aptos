@@ -245,4 +245,7 @@ Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來�
 * Payload：Aptos區塊鏈的指令，包括發佈模組、執行腳本函數或執行腳本有效負載。
 * max_gas_amount (uint64): 此交易花費的最大總gas fee。帳戶必須擁有大過此gas fee的通證，
 否則交易將在驗證過程中被丟棄。
+
+
+### 2024.09.13
 <!-- Content_END -->
