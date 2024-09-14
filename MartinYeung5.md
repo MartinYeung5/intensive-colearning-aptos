@@ -257,4 +257,10 @@ Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來�
 * Signed transaction
 * Multisignature transactions
 
+### 2024.09.14
+建立一個已簽名的交易，以下是整個流程:
+* 第一步: Creating a RawTransaction
+這例子是假設交易具有腳本函數的負載。
+
+
 <!-- Content_END -->
