@@ -261,6 +261,59 @@ Authenticator在執行交易的簽名過程中，會給Aptos區塊鏈櫂限來�
 建立一個已簽名的交易，以下是整個流程:
 * 第一步: Creating a RawTransaction
 這例子是假設交易具有腳本函數的負載。
+```
+interface AccountAddress {
+  // 32-byte array
+  address: Uint8Array;
+}
 
+interface ModuleId {
+  address: AccountAddress;
+  name: string;
+}
+
+interface ScriptFunction {
+  module: ModuleId;
+  function: string;
+  ty_args: string[];
+  args: Uint8Array[];
+}
+
+interface RawTransaction {
+  sender: AccountAddress;
+  sequence_number: number;
+  payload: ScriptFunction;
+  max_gas_amount: number;
+  gas_unit_price: number;
+  expiration_timestamp_secs: number;
+  chain_id: number;
+}
+
+function createRawTransaction(): RawTransaction {
+  const payload: ScriptFunction = {
+    module: {
+      address: hexToAccountAddress("0x01"),
+      name: "AptosCoin",
+    },
+    function: "transfer",
+    ty_args: [],
+    args: [
+      BCS.serialize(hexToAccountAddress("0x02")), // receipient of the transfer
+      BCS.serialize_uint64(2), // amount to transfer
+    ],
+  };
+
+  return {
+    sender: hexToAccountAddress("0x01"),
+    sequence_number: 1n,
+    max_gas_amount: 2000n,
+    gas_unit_price: 1n,
+    // Unix timestamp, in seconds + 10 minutes
+    expiration_timestamp_secs: Math.floor(Date.now() / 1000) + 600,
+    payload: payload,
+    chain_id: 3,
+  };
+}
+```
 
 <!-- Content_END -->
