@@ -316,4 +316,10 @@ function createRawTransaction(): RawTransaction {
 }
 ```
 
+* 第二步: Creating a RawTransaction
+步驟 2. 建立簽名訊息及進行簽名
+1. 利用字串 APTOS::RawTransaction 的 SHA3_256 雜湊位元組產生前綴 (prefix_bytes)。
+2. BCS 序列化 RawTransaction 的位元組。
+3. 連接前綴和 BCS 位元組。
+4. 使用用戶私鑰對位元組進行簽署。
 <!-- Content_END -->
