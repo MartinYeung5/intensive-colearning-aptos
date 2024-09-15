@@ -372,6 +372,10 @@ const signedTransaction: SignedTransaction = {
 };
 ```
 
+
+* 第四步: 序列化 SignedTransaction
+
+
 ### 2024.09.15
 
 
