@@ -431,4 +431,5 @@ Alice 願意為執行交易每單位 Gas 支付的金額（以 Aptos 幣為單�
 7. Chain ID: 
 區分 Aptos 網路部署的識別碼（以防止跨網路攻擊）。
 
+
 <!-- Content_END -->
