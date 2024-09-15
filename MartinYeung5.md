@@ -378,6 +378,12 @@ const signedTransaction: SignedTransaction = {
 const signedTransactionPayload = bcsSerializeSignedTransaction(signedTransaction);
 ```
 
+提交已簽署的交易:
+最後，使用所需的Header「Content-Type」提交相關交易。
+
+如果以 BCS 格式提交簽章交易，用戶端必須傳入特定Header，
+以下是例子：
+
 ### 2024.09.15
 
 
