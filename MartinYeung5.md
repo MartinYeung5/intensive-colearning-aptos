@@ -322,4 +322,8 @@ function createRawTransaction(): RawTransaction {
 2. BCS 序列化 RawTransaction 的位元組。
 3. 連接前綴和 BCS 位元組。
 4. 使用用戶私鑰對位元組進行簽署。
+
+
+### 2024.09.15
+
 <!-- Content_END -->
