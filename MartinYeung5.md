@@ -388,6 +388,10 @@ curl -X POST -H "Content-Type: application/x.aptos.signed_transaction+bcs" --dat
 ```
 
 ### 2024.09.15
+* 交易的生命周期
+為了更深入了解 Aptos 交易的生命週期（從操作角度），會追蹤交易的整個過程。
+從提交到 Aptos 全節點，到提交到 Aptos 區塊鏈。
+接下來會將重點放在 Aptos 節點的邏輯元件，看看交易如何與這些元件互動。
 
 
 <!-- Content_END -->
