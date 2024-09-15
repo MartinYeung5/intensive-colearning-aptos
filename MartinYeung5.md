@@ -372,12 +372,12 @@ const signedTransaction: SignedTransaction = {
 };
 ```
 
-
 * 第四步: 序列化 SignedTransaction
 使用 BCS 將 SignedTransaction 序列化為位元組。
 ```
 const signedTransactionPayload = bcsSerializeSignedTransaction(signedTransaction);
 ```
+
 ### 2024.09.15
 
 
