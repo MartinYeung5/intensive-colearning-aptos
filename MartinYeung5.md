@@ -383,6 +383,9 @@ const signedTransactionPayload = bcsSerializeSignedTransaction(signedTransaction
 
 如果以 BCS 格式提交簽章交易，用戶端必須傳入特定Header，
 以下是例子：
+```
+curl -X POST -H "Content-Type: application/x.aptos.signed_transaction+bcs" --data-binary "@path/to/file_contains_bcs_bytes_of_signed_txn" https://some_domain/transactions
+```
 
 ### 2024.09.15
 
