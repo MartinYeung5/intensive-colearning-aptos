@@ -390,11 +390,18 @@ curl -X POST -H "Content-Type: application/x.aptos.signed_transaction+bcs" --dat
 ### 2024.09.15
 * 交易的生命周期
 為了更深入了解 Aptos 交易的生命週期（從操作角度），會追蹤交易的整個過程。
-從提交到 Aptos 全節點，到提交到 Aptos 區塊鏈。
+從提交到 Aptos fullnode，到提交到 Aptos 區塊鏈。
 接下來會將重點放在 Aptos 節點的邏輯元件，看看交易如何與這些元件互動。
 
 * 前設:
-
+1. Alice 和 Bob 是兩個用戶，每個人在 Aptos 區塊鏈上都有一個帳戶。
+2. Alice的帳戶有110個Aptos幣。
+3. Alice 正在向 Bob 發送 10 個 Aptos 幣。
+4. Alice帳戶目前的序號是5（這表示Alice帳戶已經發送了5筆交易）。
+5. 網路上共有 100 個驗證節點 — 由 V1 到 V100。
+6. Aptos 用戶端將 Alice 的交易提交到 Aptos fullnode上的 REST 服務。
+fullnode將此交易轉送給驗證器fullnode，驗證器fullnode將其轉送給驗證器 V1。
+7. 驗證者 V1 是本輪的提議者/領導者。
 
 
 <!-- Content_END -->
