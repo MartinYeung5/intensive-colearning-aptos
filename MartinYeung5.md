@@ -322,8 +322,35 @@ function createRawTransaction(): RawTransaction {
 2. BCS 序列化 RawTransaction 的位元組。
 3. 連接前綴和 BCS 位元組。
 4. 使用用戶私鑰對位元組進行簽署。
+```
+import * as Nacl from "tweetnacl";
 
+function hashPrefix(): Buffer {
+  let hash = SHA3.sha3_256.create();
+  hash.update(`APTOS::RawTransaction`);
+  return Buffer.from(hash.arrayBuffer());
+}
+
+function bcsSerializeRawTransaction(txn: RawTransaction): Buffer {
+  ...
+}
+
+// This will serialize a raw transaction into bytes
+function serializeRawTransaction(txn: RawTransaction): Buffer {
+  // Generate a hash prefix
+  const prefix = hashPrefix();
+
+  // Serialize txn with BCS
+  const bcsSerializedTxn = bcsSerializeRawTransaction(txn);
+
+  return Buffer.concat([prefix, bcsSerializedTxn]);
+}
+
+const rawTxn = createRawTransaction();
+const signature = Nacl.sign(hashRawTransaction(rawTxn), ACCOUNT_PRIVATE_KEY);
+```
 
 ### 2024.09.15
+
 
 <!-- Content_END -->
