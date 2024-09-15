@@ -403,5 +403,15 @@ curl -X POST -H "Content-Type: application/x.aptos.signed_transaction+bcs" --dat
 fullnode將此交易轉送給驗證器fullnode，驗證器fullnode將其轉送給驗證器 V1。
 7. 驗證者 V1 是本輪的提議者/領導者。
 
+* 客戶提交交易:
+Aptos 用戶端建立一個原始交易（稱為 T5），
+將 10 個 Aptos 幣從 Alice 的帳戶轉移到 Bob 的帳戶。 
+Aptos 用戶端使用 Alice 的私鑰對交易進行簽署。已簽署的交易T5包括以下：
+
+* 原始交易
+* Alice的公鑰
+* Alice的簽名
+
+原始交易包括以下欄位：
 
 <!-- Content_END -->
