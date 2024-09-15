@@ -350,6 +350,27 @@ const signature = Nacl.sign(hashRawTransaction(rawTxn), ACCOUNT_PRIVATE_KEY);
 ```
 
 * 第三步: 建立 Authenticator(驗證器)和 SignedTransaction
+```
+interface Authenticator {
+  public_key: Uint8Array;
+  signature: Uint8Array;
+}
+
+interface SignedTransaction {
+  raw_txn: RawTransaction;
+  authenticator: Authenticator;
+}
+
+const authenticator = {
+  public_key: PUBLIC_KEY,
+  signature: signature,
+};
+
+const signedTransaction: SignedTransaction = {
+  raw_txn: rawTxn,
+  authenticator: authenticator,
+};
+```
 
 ### 2024.09.15
 
