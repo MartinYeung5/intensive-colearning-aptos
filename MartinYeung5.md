@@ -349,6 +349,8 @@ const rawTxn = createRawTransaction();
 const signature = Nacl.sign(hashRawTransaction(rawTxn), ACCOUNT_PRIVATE_KEY);
 ```
 
+* 第三步: 建立身份驗證器和 SignedTransaction
+
 ### 2024.09.15
 
 
