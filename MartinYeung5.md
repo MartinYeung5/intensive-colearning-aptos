@@ -393,5 +393,8 @@ curl -X POST -H "Content-Type: application/x.aptos.signed_transaction+bcs" --dat
 從提交到 Aptos 全節點，到提交到 Aptos 區塊鏈。
 接下來會將重點放在 Aptos 節點的邏輯元件，看看交易如何與這些元件互動。
 
+* 前設:
+
+
 
 <!-- Content_END -->
