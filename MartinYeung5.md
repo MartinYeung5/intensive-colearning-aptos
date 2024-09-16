@@ -442,9 +442,10 @@ Alice 願意為執行交易每單位 Gas 支付的金額（以 Aptos 幣為單�
 4. 執行與共識：執行區塊汞達成共識機制
 5. 提交：向區塊提出提交
 
+### 2024.09.17
 #### 驗證節點概述
 https://aptos.dev/en/network/blockchain/validator-nodes#consensus
-
-
+Aptos 節點是 Aptos 生態系統的一個實體，用於追蹤 Aptos 區塊鏈的狀態。
+客戶端透過 Aptos 節點與區塊鏈互動。有兩種類型的節點：
 
 <!-- Content_END -->
