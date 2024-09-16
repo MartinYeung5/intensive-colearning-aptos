@@ -443,6 +443,8 @@ Alice 願意為執行交易每單位 Gas 支付的金額（以 Aptos 幣為單�
 5. 提交：向區塊提出提交
 
 #### 驗證節點概述
+https://aptos.dev/en/network/blockchain/validator-nodes#consensus
+
 
 
 <!-- Content_END -->
