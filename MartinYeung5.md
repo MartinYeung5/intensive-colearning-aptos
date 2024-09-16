@@ -432,7 +432,7 @@ Alice 願意為執行交易每單位 Gas 支付的金額（以 Aptos 幣為單�
 區分 Aptos 網路部署的識別碼（以防止跨網路攻擊）。
 
 ### 2024.09.16
-* 交易的生命周期
+#### 交易的生命周期
 ![alt text](https://github.com/MartinYeung5/intensive-colearning-aptos/blob/main/20240916_lifecycle_of_transaction.svg?raw=true)
 
 交易的生命週期分為五個階段：
@@ -441,6 +441,8 @@ Alice 願意為執行交易每單位 Gas 支付的金額（以 Aptos 幣為單�
 3. 提議：向區塊提出提議
 4. 執行與共識：執行區塊汞達成共識機制
 5. 提交：向區塊提出提交
-以下是每個階段發生的情況，以及相應 Aptos 節點組件互動的簡介。
+
+#### 驗證節點概述
+
 
 <!-- Content_END -->
