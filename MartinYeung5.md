@@ -433,6 +433,6 @@ Alice 願意為執行交易每單位 Gas 支付的金額（以 Aptos 幣為單�
 
 ### 2024.09.16
 * 交易的生命周期
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/MartinYeung5/intensive-colearning-aptos/blob/main/20240916_lifecycle_of_transaction.svg?raw=true)
 
 <!-- Content_END -->
