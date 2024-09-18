@@ -542,4 +542,6 @@ module my_addr::fungible_asset_example {
 }
 ```
 
+### 2024.09.20
+
 <!-- Content_END -->
