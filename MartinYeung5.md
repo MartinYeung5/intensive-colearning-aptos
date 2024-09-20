@@ -543,5 +543,42 @@ module my_addr::fungible_asset_example {
 ```
 
 ### 2024.09.20
+實測了Aptos中的 "Connect" 功能，基本上是很容易使用，使用過程沒有遇到困難。
+
+首先需要安裝Aptos Wallet Adapter
+```
+pnpm add @aptos-labs/wallet-adapter-react
+```
+
+AptosConnect is auto-added to the package, so no need to add it as a plugin. If you want to show other wallets you can include them in the plugins.
+
+```
+  import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
+ 
+  const wallets = [new AnyOtherWalletYouWantToInclude()];
+  <AptosWalletAdapterProvider
+    plugins={wallets}
+    autoConnect={true}
+    optInWallets={["Petra"]}
+    dappConfig={{ network: network.MAINNET, aptosConnectDappId: "dapp-id" }}>
+      <App >
+  </AptosWalletAdapterProvider>
+```
+
+Send a transaction
+```
+const { signAndSubmitTransaction } = useWallet();
+ 
+const transaction: InputTransactionData = {
+  data: {
+    function: '0x1::coin::transfer',
+    typeArguments: [APTOS_COIN],
+    functionArguments: [account.address, 1],
+  },
+};
+ 
+const txn = await signAndSubmitTransaction(transaction);
+```
+
 
 <!-- Content_END -->
