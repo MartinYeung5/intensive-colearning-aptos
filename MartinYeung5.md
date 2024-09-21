@@ -579,6 +579,28 @@ const transaction: InputTransactionData = {
  
 const txn = await signAndSubmitTransaction(transaction);
 ```
+### 2024.09.21
+The Digital Asset (DA) standard is a modern Non-Fungible Token (NFT) standard for Aptos. NFTs represent unique assets on-chain, and are stored in collections. These NFTs can be customized to later be transferred, soulbound, burned, mutated, or customized via your own smart contracts.
 
+* smart contract testing:
+```
+use aptos_token_objects::collection;
+use std::option::{Self, Option};
+ 
+public entry fun create_collection(creator: &signer) {
+    let max_supply = 1000;
+    let royalty = option::none();
+    
+    // Maximum supply cannot be changed after collection creation
+    collection::create_fixed_collection(
+        creator,
+        "My Collection Description",
+        max_supply,
+        "My Collection",
+        royalty,
+        "https://mycollection.com",
+    );
+}
+```
 
 <!-- Content_END -->
