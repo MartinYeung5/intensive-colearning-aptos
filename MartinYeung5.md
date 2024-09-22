@@ -623,4 +623,24 @@ public entry fun create_collection(creator: &signer) {
 }
 ```
 
+另外，也可以自定義一個集合，
+Since each Collection is a Move Object, you can customize it by generating permissions called Refs. Each Ref allows you to modify an aspect of the Object later on. Beyond the normal Object Refs, Collections can also get a MutatorRef by calling get_mutator_ref like so:
+
+```
+use std::option::{Self, Option};
+ 
+public entry fun create_collection(creator: &signer) {
+    let royalty = option::none();
+    let collection_constructor_ref = &collection::create_unlimited_collection(
+        creator,
+        "My Collection Description",
+        "My Collection",
+        royalty,
+        "https://mycollection.com",
+    );
+    let mutator_ref = collection::get_mutator_ref(collection_constructor_ref);
+    // Store the mutator ref somewhere safe
+}
+```
+
 <!-- Content_END -->
