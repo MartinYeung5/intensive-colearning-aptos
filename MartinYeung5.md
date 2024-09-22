@@ -604,5 +604,23 @@ public entry fun create_collection(creator: &signer) {
 ```
 
 ### 2024.09.22
+繼續學習Aptos Digital Asset (DA) Standard，
+如果需要用到無限制的供應，可以用這個集合 - collection::create_unlimited_collection:
+
+```
+use std::option::{Self, Option};
+ 
+public entry fun create_collection(creator: &signer) {
+    let royalty = option::none();
+ 
+    collection::create_unlimited_collection(
+        creator,
+        "My Collection Description",
+        "My Collection",
+        royalty,
+        "https://mycollection.com",
+    );
+}
+```
 
 <!-- Content_END -->
