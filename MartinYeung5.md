@@ -642,5 +642,8 @@ public entry fun create_collection(creator: &signer) {
     // Store the mutator ref somewhere safe
 }
 ```
+### 2024.09.23
+閱讀Aptos Move v2
+
 
 <!-- Content_END -->
