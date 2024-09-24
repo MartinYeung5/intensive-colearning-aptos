@@ -1952,5 +1952,38 @@ module listing_tests {
 }
 ```
 
+### 2024.09.25
+最近看這個例子
+https://github.com/aptos-labs/aptos-wallet-adapter/blob/ee95b8b3cd9eff0d7ebec1f3ee8017d222fe0e15/apps/nextjs-example/src/components/transactionFlows/MultiAgent.tsx#L18
+
+在進行submit transaction:
+```
+const response = await submitTransaction({
+        transaction: transactionToSubmit,
+        senderAuthenticator: senderAuthenticator,
+        additionalSignersAuthenticators: [secondarySignerAuthenticator],
+      });
+```
+有error:
+App.tsx:171 AptosApiError: Request to [Fullnode]: POST https://api.testnet.aptoslabs.com/v1/transactions failed with: {"message":"Invalid transaction: Type: Validation Code: INVALID_AUTH_KEY","error_code":"vm_error","vm_error_code":2}
+    at y (core.ts:100:1)
+    at async B (transactionSubmission.ts:262:1)
+    at async submitTransaction (WalletProvider.tsx:145:1)
+    at async onSubmitTransaction (App.tsx:163:1)
+
+```
+const response = await aptos.transaction.submit.multiAgent({
+        transaction: transactionToSubmit,
+        senderAuthenticator: senderAuthenticator,
+        additionalSignersAuthenticators: [secondarySignerAuthenticator],
+      });
+```
+也有Error:
+App.tsx:173 AptosApiError: Request to [Fullnode]: POST https://api.testnet.aptoslabs.com/v1/transactions failed with: {"message":"Invalid transaction: Type: Validation Code: INVALID_AUTH_KEY","error_code":"vm_error","vm_error_code":2}
+    at y (core.ts:100:1)
+    at async B (transactionSubmission.ts:262:1)
+    at async onSubmitTransaction (App.tsx:163:1)
+
+
 
 <!-- Content_END -->
