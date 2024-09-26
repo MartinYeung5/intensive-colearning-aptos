@@ -1984,6 +1984,9 @@ App.tsx:173 AptosApiError: Request to [Fullnode]: POST https://api.testnet.aptos
     at async B (transactionSubmission.ts:262:1)
     at async onSubmitTransaction (App.tsx:163:1)
 
-
+### 2024.09.26
+對於multisig的學習更深入的理解，在導師的指導和幫助下，順利完成一些官方的例子。
+在學習過程中會遇到各種問題，特別是遇到舊的、錯誤的文檔，真的會讓人感到莫名其妙，要是沒有導師指導，
+相信在短時間內是難以學習到。
 
 <!-- Content_END -->
