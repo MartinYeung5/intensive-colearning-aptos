@@ -1993,19 +1993,4 @@ App.tsx:173 AptosApiError: Request to [Fullnode]: POST https://api.testnet.aptos
 在使用Account.generate()時，如果要在testnet/devtest上進行單一測試時要大量使用，就要多留意。因為是有次數限制，如果到了某次數
 就會被禁止使用。所以在testnet/devtest上，可以選擇使用自己創建的測試地址進行測試，盡量避免在短時間內使用多次Account.generate()。
 
-### 2024.10.19
-https://www.youtube.com/watch?v=_hZXS3Nc1d4
-* NFT
-
-* 在影片中，提到aptos move build --dev
-怎樣用?
-
-aptos 2.5.0
-* aptos update
-
-* aptos move compile --named-addresses contract=default --skip-fetch-latest-git-deps 
-* aptos move deploy-object --address-name contract
-
-Transaction submitted: https://explorer.aptoslabs.com/txn/0x7e38c78cd7ca227a50b24d80fa69b769d58361b8e12b05265551e2515b1a8742
-
 <!-- Content_END -->
