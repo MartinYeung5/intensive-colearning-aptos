@@ -1997,6 +1997,9 @@ App.tsx:173 AptosApiError: Request to [Fullnode]: POST https://api.testnet.aptos
 https://www.youtube.com/watch?v=_hZXS3Nc1d4
 * NFT
 
+* 在影片中，提到aptos move build --dev
+怎樣用?
 
+ 
 
 <!-- Content_END -->
