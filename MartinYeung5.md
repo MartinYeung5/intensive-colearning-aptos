@@ -2000,6 +2000,12 @@ https://www.youtube.com/watch?v=_hZXS3Nc1d4
 * 在影片中，提到aptos move build --dev
 怎樣用?
 
- 
+aptos 2.5.0
+* aptos update
+
+* aptos move compile --named-addresses contract=default --skip-fetch-latest-git-deps 
+* aptos move deploy-object --address-name contract
+
+Transaction submitted: https://explorer.aptoslabs.com/txn/0x7e38c78cd7ca227a50b24d80fa69b769d58361b8e12b05265551e2515b1a8742
 
 <!-- Content_END -->
